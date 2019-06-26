@@ -42,11 +42,11 @@ teams:
     templateSource:
       uri: "https://github.com/Smiley73/eunomia"
       ref: "clusterdemo"
-      contextDir: "examples/cluster/teams/seed-team1/templates"
+      contextDir: "examples/cluster/teams/platform/seed-team1/templates"
     parameterSource:
       uri: "https://github.com/Smiley73/eunomia"
       ref: "master"
-      contextDir: "examples/cluster/teams/seed-team1/parameters"
+      contextDir: "examples/cluster/teams/platform/seed-team1/parameters"
   team2:
     name: "team2"
     namespace: "eunomia-seed-team2"
@@ -57,8 +57,8 @@ teams:
     templateSource:
       uri: "https://github.com/Smiley73/eunomia"
       ref: "master"
-      contextDir: "examples/cluster/teams/seed-team2/templates"
+      contextDir: "examples/cluster/teams/platform/seed-team2/templates"
     parameterSource:
       uri: "https://github.com/Smiley73/eunomia"
       ref: "master"
-      contextDir: "examples/cluster/teams/seed-team2/parameters"
+      contextDir: "examples/cluster/teams/platform/seed-team2/parameters"
