@@ -2,7 +2,7 @@ imageRegistry: "gcr.io"
 imageName: "google-samples/hello-app"
 imageTag: "1.0"
 imagePullPolicy: IfNotPresent
-nodePort: 31384
+nodePort: 32004
 replicas: 1
 namespace: "team2-ns2"
 appname: "app1"
