@@ -6,3 +6,5 @@ nodePort: 31384
 replicas: 1
 appname: "hello-world"
 namespace: "eunomia-hello-world-demo"
+service:
+  enabled: true
