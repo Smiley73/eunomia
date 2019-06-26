@@ -16,12 +16,12 @@ spec:
   templateSource:
     uri: "{{ $.Values.GitOpsConfig.templateSource.uri }}"
     ref: "{{ $.Values.GitOpsConfig.templateSource.ref }}"
-    contextDir: "{{ $.Values.GitOpsConfig.templatePath }}"
+    contextDir: "{{ .templatePath }}"
     #secretName: "{{ $.Values.GitOpsConfig.parameterSource.secretName }}
   parameterSource:
     uri: "{{ $.Values.GitOpsConfig.parameterSource.uri }}"
     ref: "{{ $.Values.GitOpsConfig.parameterSource.ref }}"
-    contextDir: "{{ $.Values.GitOpsConfig.parameterPath }}"
+    contextDir: "{{ .parameterPath }}"
     #secretName: "{{ $.Values.GitOpsConfig.parameterSource.secretName }}
 ---
 {{- end }}
