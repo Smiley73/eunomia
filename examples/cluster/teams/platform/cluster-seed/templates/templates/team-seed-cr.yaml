@@ -10,7 +10,7 @@ spec:
 apiVersion: eunomia.kohls.io/v1alpha1
 kind: GitOpsConfig
 metadata:
-  name: "{{ .name }}"
+  name: "seed-{{ .name }}"
   namespace: "{{ .namespace }}"
 spec:
   serviceAccountRef: "{{ .serviceAccountRef }}"
