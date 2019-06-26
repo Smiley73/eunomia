@@ -57,12 +57,12 @@ roleRef:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: eunomia-operator-cluster-admin
-  namespace: "{{ .namespace }}"
+  name: eunomia-runner-{{ .seedNamespace }}
+  namespace: "{{ .seedNamespace }}"
 subjects:
 - kind: ServiceAccount
   name: "{{ .serviceAccountRef }}"
-  namespace: "{{ .namespace }}"
+  namespace: "{{ .seedNamespace }}"
 roleRef:
   kind: ClusterRole
   name: cluster-admin
