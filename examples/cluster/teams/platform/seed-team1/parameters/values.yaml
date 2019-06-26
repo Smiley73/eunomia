@@ -1,0 +1,8 @@
+name: "team1"
+namespaces:
+  - namespace: team1-ns1
+    serviceAccountRef: "eunomia-runner"
+  - namespace: team1-ns2
+    serviceAccountRef: "eunomia-runner"
+  - namespace: team1-ns3
+    serviceAccountRef: "eunomia-runner"
