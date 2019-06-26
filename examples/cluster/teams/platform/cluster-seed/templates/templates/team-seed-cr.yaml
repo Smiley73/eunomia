@@ -1,4 +1,12 @@
 {{- range .Values.teams }}
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: "{{ .namespace }}"
+spec:
+  finalizers:
+  - kubernetes
+---
 apiVersion: eunomia.kohls.io/v1alpha1
 kind: GitOpsConfig
 metadata:
