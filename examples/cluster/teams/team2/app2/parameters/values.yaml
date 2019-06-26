@@ -3,6 +3,6 @@ imageName: "google-samples/hello-app"
 imageTag: "1.0"
 imagePullPolicy: IfNotPresent
 nodePort: 31384
-replicas: 3
-appname: "hello-world"
-namespace: "eunomia-hello-world-demo"
+replicas: 1
+namespace: "team1-ns1"
+appname: "app1"

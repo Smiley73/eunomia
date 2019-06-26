@@ -1,11 +1,14 @@
 teamName: "team1"
 namespaces: 
   - name: team1-ns1
-    directory: examples/cluster/teams/team1/app1
+    parameterPath: examples/cluster/teams/team1/app1/parameters
+    templatePath: eunomia/examples/hello-world-helm/templates
   - name: team1-ns2
-    directory: examples/cluster/teams/team1/app2
+    parameterPath: examples/cluster/teams/team1/app2/parameters
+    templatePath: eunomia/examples/hello-world-helm/templates
   - name: team1-ns3
-    directory: examples/cluster/teams/team1/app3
+    parameterPath: examples/cluster/teams/team1/app3/parameters
+    templatePath: eunomia/examples/hello-world-helm/templates
 GitOpsConfig:
   serviceAccountRef: "eunomia-runner"
   templateProcessorImage: "quay.io/kohlstechnology/eunomia-helm:v0.0.1"
