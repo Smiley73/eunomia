@@ -20,6 +20,7 @@ metadata:
 subjects: 
 - kind: ServiceAccount
   name: {{ .Values.eunomiaOperator.serviceAccount }}
+  namespace: {{ .Values.eunomiaOperator.namespace }}
 roleRef:
   kind: Role
   name: eunomia-operator
