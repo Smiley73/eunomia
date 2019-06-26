@@ -1,1 +1,19 @@
-name: "team1"
+teamName: "team1"
+namespaces: 
+  - name: team1-ns1
+    directory: examples/cluster/teams/team1/app1
+  - name: team1-ns2
+    directory: examples/cluster/teams/team1/app2
+  - name: team1-ns3
+    directory: examples/cluster/teams/team1/app3
+GitOpsConfig:
+  serviceAccountRef: "eunomia-runner"
+  templateProcessorImage: "quay.io/kohlstechnology/eunomia-helm:v0.0.1"
+  triggers:
+    cron: "* */8 * * *"
+  templateSource:
+    uri: "https://github.com/Smiley73/eunomia"
+    ref: "clusterdemo"
+  parameterSource:
+    uri: "https://github.com/Smiley73/eunomia"
+    ref: "clusterdemo"
