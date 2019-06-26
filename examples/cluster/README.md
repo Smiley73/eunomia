@@ -27,6 +27,7 @@ helm template -f examples/cluster/teams/platform/cluster-seed/parameters/values.
 
 # Deploy the operator
 helm template -f examples/cluster/teams/platform/eunomia-operator/parameters/values.yaml examples/cluster/teams/platform/eunomia-operator/templates/ | kubectl apply -f -
+
 ```
 
 At this point the cluster should be "magically" configuring itself and within a few minutes all resources should be available.
