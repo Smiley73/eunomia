@@ -5,6 +5,7 @@ metadata:
   name: eunomia-operator
   namespace: "{{ .namespace }}"
 spec:
+{{- with .GitOpsConfig }}
   templateSource:
     uri: {{ .templateSource.uri }}
     ref: {{ .templateSource.ref }}
@@ -21,4 +22,5 @@ spec:
   templateProcessorImage: "{{ .templateProcessorImage }}"
   resourceHandlingMode: CreateOrMerge
   resourceDeletionMode: Delete
+{{- end }}
 {{- end }}

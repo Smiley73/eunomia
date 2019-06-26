@@ -20,7 +20,7 @@ kubectl create namespace eunomia-operator
 kubectl create configmap eunomia-templates --from-file=./templates/cronjob.yaml --from-file=./templates/job.yaml -n eunomia-operator
 
 # Deploy the operator
-kubectl apply -f ./deploy/kubernetes -n eunomia-operator
+#kubectl apply -f ./deploy/kubernetes -n eunomia-operator
 
 # Make sure the operator pod is running
 kubectl get pods -n eunomia-operator
@@ -30,6 +30,10 @@ kubectl create namespace eunomia-cluster-seed
 
 # Initial configuration of the cluster seed
 helm template -f examples/cluster/teams/platform/cluster-seed/parameters/values.yaml examples/cluster/teams/platform/cluster-seed/templates/ | kubectl apply -f -
+
+# Deploy the operator
+helm template -f examples/cluster/teams/platform/eunomia-operator/parameters/values.yaml examples/cluster/teams/platform/eunomia-operator/templates/ | kubectl apply -f -
+
 ```
 
 At this point the cluster should be "magically" configuring itself and within a few minutes all resources should be available.
