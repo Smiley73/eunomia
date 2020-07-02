@@ -2,7 +2,7 @@ imageRegistry: "gcr.io"
 imageName: "google-samples/hello-app"
 imageTag: "2.0"
 imagePullPolicy: IfNotPresent
-nodePort: 31333
+nodePort: 31313
 replicas: 1
 appname: "hello-world3"
 namespace: "eunomia-hello-world-demo"
